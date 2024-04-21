@@ -1,0 +1,25 @@
+<%= link_to "post tags", post_tags_path %>
+<%= link_to "new post tags", new_post_tag_path %>
+<br>
+
+<%= link_to "new tags", new_tag_path %>
+<br>
+
+<%= link_to "comments", comments_path %>
+<%= link_to "new comments", new_comment_path %>
+<br>
+
+<%= link_to "post", posts_path %>
+<%= link_to "new post", new_post_path %>
+<br>
+
+<%= link_to "new user / login?", new_user_session_path %>
+<%= link_to "new senha?", new_user_password_path%>
+<%= link_to "edit senha?", edit_user_password_path%>
+<%= link_to "apagar user?", cancel_user_registration_path %>
+<%= link_to "cadastro?", new_user_registration_path %>
+<%= link_to "editar cadastro?",edit_user_registration_path %>
+
+<%= button_to 'Deslogar', destroy_user_session_path, method: :delete %>
+
+

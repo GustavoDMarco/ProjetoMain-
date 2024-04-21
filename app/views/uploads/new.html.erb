@@ -1,0 +1,5 @@
+<%= form_with(url: uploads_path, method: :post, local: true) do |form| %>
+    <%= form.file_field :file %>
+    <%= form.submit 'Upload' %>
+<% end %>
+   

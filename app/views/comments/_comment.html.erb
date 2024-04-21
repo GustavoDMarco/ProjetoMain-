@@ -1,0 +1,10 @@
+<% unless !comment.persisted? %>
+  <div id="<%= dom_id comment %>">
+    <p>Comentário de <%= comment.user&.name || "Anônimo" %> em <%= comment.post.created_at.strftime("%d/%m/%Y") %></p>
+    <p>
+      <strong>Content:</strong>
+      <%= comment.content %>
+    </p>
+  </div>
+  
+<% end %>
