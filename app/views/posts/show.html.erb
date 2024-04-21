@@ -2,9 +2,10 @@
 
 <%= render @post %>
 
+<p>Se desejar fazer um comentário anônimo, deslogue da sua conta</p>
+<%= button_to 'Deslogar', destroy_user_session_path, method: :delete %>
+
 <%= form_with(model: [ @post, @post.comments.build ], local: true) do |form| %>
-  <p>Se desejar fazer um comentário anônimo, deslogue da sua conta</p>
-  <%= button_to 'Deslogar', destroy_user_session_path, method: :delete %>
   
  <div class="field">
     <%= form.label :content %>
