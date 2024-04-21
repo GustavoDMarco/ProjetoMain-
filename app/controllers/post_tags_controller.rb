@@ -58,13 +58,14 @@ class PostTagsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_post_tag
-      @post_tag = PostTag.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def post_tag_params
-      params.require(:post_tag).permit(:post_id, :tag_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_post_tag
+    @post_tag = PostTag.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def post_tag_params
+    params.require(:post_tag).permit(:post_id, :tag_id)
+  end
 end
