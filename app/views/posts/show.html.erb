@@ -1,26 +1,38 @@
-<p style="color: green"><%= notice %></p>
-
+<% if notice %>
+ <div class="alert alert-success" role="alert">
+    <%= notice %>
+ </div>
+<% end %>
+<div class="index">
 <%= render @post %>
 
 <p>Se desejar fazer um comentário anônimo, deslogue da sua conta</p>
-<%= button_to 'Deslogar', destroy_user_session_path, method: :delete %>
 
-<%= form_with(model: [ @post, @post.comments.build ], local: true) do |form| %>
+<%= form_with(model: [@post, @post.comments.build], local: true) do |form| %>
   
- <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
- </div>
+   <hr>
 
- <div class="actions">
-    <%= form.submit %>
- </div>
- <%= render @post.comments %>
+   <div class="form-floating">
+      <div id = "label">
+         <label for="floatingTextarea">Comments</label>
+      </div>
+      <%= form.text_area :content %>
+   </div>
+
+   <div id="CRUDs">
+      <button class="btn btn-success" type="submit">Create Comment</button>
+   </div>
+   <hr>
+   <%= render @post.comments %>
 <% end %>
 
 <div>
-  <%= link_to "Edit this post", edit_post_path(@post) %> |
-  <%= link_to "Back to posts", posts_path %>
+   <% if current_user == @post.user %>
+      <%= button_to "Destroy this post", @post, method: :delete, class: "btn btn-danger", data: { confirm: "Are you sure?" } %>
+      <%= link_to "Edit this post", edit_post_path(@post), class: "btn btn-primary" %> |
+   <% end %>
 
-  <%= button_to "Destroy this post", @post, method: :delete %>
+   <%= link_to "Back to posts", posts_path, class: "btn btn-outline-primary" %>
+
+</div>
 </div>

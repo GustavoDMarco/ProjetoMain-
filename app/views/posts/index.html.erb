@@ -1,17 +1,22 @@
-<p style="color: green"><%= notice %></p>
+<% if notice %>
+ <div class="alert alert-success" role="alert">
+    <%= notice %>
+ </div>
+<% end %>
 
-<h1>Posts</h1>
 
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
+<div class="index">
+  <h1>Posts</h1>
+  <%= link_to "New post", new_post_path, class: "btn btn-success" %>
+  <div id="posts">
+    <% @posts.each do |post| %>
+      <%= render post %>
+      <%= link_to "Show this post", post, class: "btn btn-outline-primary" %>
   <% end %>
 </div>
+  <%= paginate @posts %>
+</div>
 
-<%= link_to "New post", new_post_path %>
+ 
 
-<%= paginate @posts %>
 

@@ -14,6 +14,182 @@
 
  @import 'bootstrap';
 
-.pagination {
-    margin: 20px 0;
-}
+ body {
+    margin: auto;
+    background-color: white;
+    padding-bottom: 100px;
+  }
+  
+  /*cor 1 fundo body - F5F5F5
+  cor 2 header- 003695
+  cor 3 links - 76ADFF
+  cor 4 fundo section - EEEEEE
+  cor 5 aside - 3E5BAC
+  */
+
+  main{
+    min-width: 200px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  header{
+    padding-bottom: 10px;
+    margin: auto;
+    background-color:#003695 ;
+    margin-bottom: 20px;
+    display: block;
+  }
+  
+  nav{
+    text-align: center;
+    padding-top: 30px;
+  }
+  nav>a{
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    padding-left: 15px;
+  
+  }
+  nav>a:hover{
+    color: #76ADFF;
+    padding: 10px;
+    font-size: 26px;
+    transition-duration: 0.7s;
+    text-decoration: none;
+  }
+  
+  section{
+    background-color: #EEEEEE;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    margin: auto;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.185);
+    border-radius: 5px;
+  }
+  section>h1{
+    text-align: center;
+    color: #003695;
+    font-weight: bold;
+    font-size: 36px;
+  }
+  section>h2{
+    color: #003695;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 1px;
+  }
+  section>p{
+    margin-bottom: 5px;
+    line-height: normal;
+  }
+  aside{
+    background-color:#97C0FF;
+    margin-top: 15px;
+    padding: 5px 0px;
+    border-radius: 5px;
+  }
+  aside>h3{
+    color: #003695;
+    font-weight: bold;
+    text-indent: 20px;
+  }
+  
+  li{
+    color: #003695;
+    font-weight: bold;
+  }
+  li>strong{
+    color: #000;
+    font-weight: bold;
+  }
+  
+  aside>ul>li>a{
+    color: #003695;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .index{
+    height: auto;
+    text-align: center;
+    margin: auto;
+    background-color: #EEEEEE;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.26);
+    min-width: 200px;
+    max-width: 600px;
+  }
+  .index>h1{
+    padding: 10px;
+    background-color: #003695;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.24);
+    color: white;
+    margin-bottom: 10px;
+    font-size: 34px;
+  }
+  .index#detalhes>p{
+    margin-bottom: 10px;
+  }
+  .index#detalhes>h2{
+    margin-bottom: 10px;
+  }
+  
+  #notice{
+    text-align: center;
+    color: green;
+    font-weight: bolder;
+    margin-bottom: 8px;
+  }
+  
+  .forms{
+    text-align: center;
+    width: 450px;
+    padding: 0px;
+  }
+  .forms>h1{
+    padding: 10px;
+    background-color: #003695;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.24);
+    color: white;
+    margin-bottom: 10px;
+    font-size: 34px;
+    font-weight: normal;
+  
+  }
+  .field{
+    font-weight: bold;
+    text-align: left;
+    margin-left: 90px;
+    margin-top: 10px;
+  }
+  
+  input,
+  select,
+  optgroup,
+  textarea {
+    margin-bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    line-height: inherit;
+    margin-left: 15px;
+  }
+  
+  div#CRUDs{
+    margin: auto;
+    margin-bottom: 10px;
+  }
+  
+  div#deslogar{
+    margin-left: 1000px;
+    margin-bottom: 50px;
+  }
+
+  div#label{
+    margin: auto;
+  }
+
+  p#pVermelho{
+    color: red;
+  }

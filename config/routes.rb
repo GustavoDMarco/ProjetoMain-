@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :post_tags
   resources :tags
   resources :comments
-  
+
   resources :posts do
     resources :comments, only: [:new,:create]
   end
@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     registrations: 'users/registrations',
     sessions: 'users/sessions'
   }
-  
+
 
   #Página inicial
   get 'home/index'
@@ -20,7 +20,7 @@ Rails.application.routes.draw do
 
   #Uploads TXT
   post 'uploads', to: 'uploads#create'
-  
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

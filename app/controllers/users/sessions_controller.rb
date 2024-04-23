@@ -13,11 +13,16 @@ class Users::SessionsController < Devise::SessionsController
  def create
     user = User.find_by(email: params[:user][:email])
     if user.nil?
-      redirect_to new_user_registration_path, alert: 'Conta não cadastrado. Por favor, cadastre-se.'
+      redirect_to new_user_registration_path, alert: 'Account not found. Please, register!'
     else
       super
     end
  end
+
+ def after_sign_in_path_for(resource)
+  root_path
+end
+
 
  private
 
