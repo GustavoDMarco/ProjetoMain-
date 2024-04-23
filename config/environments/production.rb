@@ -4,7 +4,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
-  config.action_mailer.default_url_options = { host: ENV['DEVISE_HOST'] }
+  config.action_mailer.default_url_options = { host: ENV['https://projetomaino.onrender.com'] }
   config.enable_reloading = false
 
   # Eager load code on boot. This eager loads most of Rails and
